@@ -474,6 +474,17 @@ article:hover .overlay .line {
 .primary-navigation .links li a {
   color: #fff;
   text-decoration: none;
+  img {
+    position: absolute;
+    top: 14px;
+    left: 42px;
+    width: 140px;
+    height: auto;
+    @media screen and (max-width:720px) {
+      top: 2px;
+      left: 20px;
+    }
+  }
 }
 
 .primary-navigation.fixed .links li a {
@@ -483,12 +494,12 @@ article:hover .overlay .line {
 .primary-navigation.fixed .links li a:hover,
 .primary-navigation .links li a.active,
 .primary-navigation .links li a:hover {
-  color: #FC5253;
+  color: #f78509;
 }
 
 @media screen and (max-width:1025px) {
   .primary-navigation {
-    padding: 20px 0;
+    padding: 30px 0;
   }
 }
 
@@ -497,7 +508,7 @@ article:hover .overlay .line {
     display: block;
     position: absolute;
     right: 20px;
-    top: 0;
+    top: 10px;
     width: 30px;
   }
 
@@ -538,7 +549,7 @@ article:hover .overlay .line {
 
   .primary-navigation .links {
     background: #fff;
-    background: rgba(255,255,255,.95);
+    background: rgba(14, 12, 11, 0.5);
     left: 0;
     opacity: 0;
     padding: 15px 0;
@@ -566,7 +577,7 @@ article:hover .overlay .line {
   }
 
   .primary-navigation .links li a {
-    color: #33384A;
+    color: #fff;
   }
 
   //.primary-navigation .links li:after {
@@ -2173,7 +2184,7 @@ article:hover .overlay .line {
 }
 
 .main-footer {
-  padding: 50px 0;
+  padding: 35px 0;
   background-color: #84807d;
 }
 
@@ -2281,9 +2292,15 @@ article:hover .overlay .line {
     border: 2px solid rgba(255, 255, 255, 0.27);
     cursor: pointer;
     right: 20px;
-    top: 26px;
+    top: 20px;
     &:hover {
       border: 2px solid rgba(255,255,255,0.4);
+    }
+    @media screen and (max-width:720px) {
+      display: none;
+    }
+    .fixed & {
+      display: none;
     }
     .scroll {
       display: block;
@@ -2322,3 +2339,18 @@ article:hover .overlay .line {
       transform: translateY(10px);
     }
   }
+
+footer {
+  p {
+    float: right;
+    position: relative;
+    color: #fff;
+    a {
+      color:#fff;
+      text-decoration: none;
+      &:hover {
+        color:#ccc;
+      }
+    }
+  }
+}

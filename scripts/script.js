@@ -39,6 +39,12 @@ jQuery(document).ready(function($) {
 
     });
 
+    $(".mouse").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".row-1").offset().top -71
+        }, 400);
+    });
+
     // forms
 
     var $form = $("#form");
