@@ -1,0 +1,432 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+/* line 6, ../scss/reset.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 16, ../scss/reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 19, ../scss/reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../scss/reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 25, ../scss/reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 29, ../scss/reset.scss */
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 35, ../scss/reset.scss */
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* line 40, ../scss/reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 48, ../scss/reset.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1, ../scss/base.scss */
+html {
+  background-color: #fff;
+  height: 100%;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  overflow-x: hidden;
+}
+
+/* line 10, ../scss/base.scss */
+p {
+  line-height: 1.3;
+}
+
+/* line 14, ../scss/base.scss */
+h1, h2 {
+  line-height: 1.5;
+}
+
+/* line 18, ../scss/base.scss */
+h1 {
+  font: 42px/1.3 "Open Sans", sans-serif;
+}
+
+/* line 22, ../scss/base.scss */
+h2 {
+  font: 24px/1.3 "Open Sans", sans-serif;
+}
+
+/* line 26, ../scss/base.scss */
+h3 {
+  font: 18px/1.3 "Open Sans", sans-serif;
+}
+
+/* line 30, ../scss/base.scss */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* line 36, ../scss/base.scss */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+  border-top: 20px solid #3bc0c3;
+}
+
+/* line 45, ../scss/base.scss */
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 51, ../scss/base.scss */
+.mobile {
+  display: none;
+}
+@media (max-width: 767px) {
+  /* line 51, ../scss/base.scss */
+  .mobile {
+    display: block;
+  }
+}
+
+/* line 1, ../scss/header.scss */
+header {
+  float: left;
+  width: 100%;
+  height: 130px;
+}
+@media (max-width: 767px) {
+  /* line 1, ../scss/header.scss */
+  header {
+    height: 80px;
+  }
+}
+/* line 8, ../scss/header.scss */
+header .container {
+  border-bottom: 5px solid #0f1922;
+}
+@media (max-width: 767px) {
+  /* line 8, ../scss/header.scss */
+  header .container {
+    border: 0;
+  }
+}
+/* line 14, ../scss/header.scss */
+header #logo {
+  position: absolute;
+  left: 10px;
+  top: 25px;
+  text-indent: -9999em;
+  background-image: url(../../my-assets/images/logo.png);
+  background-repeat: no-repeat;
+  height: 55px;
+  width: 268px;
+  z-index: 99999;
+}
+@media (max-width: 415px) {
+  /* line 14, ../scss/header.scss */
+  header #logo {
+    background-size: 140px;
+    width: 160px;
+    top: 37px;
+    height: 33px;
+  }
+}
+/* line 32, ../scss/header.scss */
+header .menu-hamburger {
+  width: 45px;
+  min-width: 45px;
+  margin-right: 10px;
+  background-color: #edf1f2;
+  position: absolute;
+  right: 0;
+  padding: 0 10px;
+  border-radius: 4px;
+  height: 36px;
+  border: 1px solid #edf1f2;
+  top: 36px;
+  text-align: center;
+  z-index: 999999999999;
+}
+/* line 46, ../scss/header.scss */
+header .menu-hamburger img {
+  position: absolute;
+  top: 7px;
+  left: 9px;
+}
+
+/* =============================================================================
+  HTML, BODY
+============================================================================= */
+/* line 5, ../scss/content.scss */
+html,
+body {
+  height: 100%;
+}
+
+/* line 10, ../scss/content.scss */
+body {
+  font-size: 16px;
+  font-family: "Oxygen", sans-serif;
+  line-height: 1.5;
+  margin: 0 !important;
+}
+
+/* =============================================================================
+  CONTENT
+============================================================================= */
+/* line 21, ../scss/content.scss */
+.content {
+  position: relative;
+  top: 30%;
+  z-index: 2;
+  margin: 0 auto;
+  max-width: 720px;
+  text-align: center;
+}
+
+/* line 30, ../scss/content.scss */
+.content__heading {
+  margin-bottom: 24px;
+  color: #272727;
+  font-size: 44px;
+}
+
+/* line 36, ../scss/content.scss */
+.content__teaser {
+  margin-bottom: 24px;
+  color: #595959;
+  font-size: 22px;
+}
+
+/* line 42, ../scss/content.scss */
+.content__cta {
+  display: inline-block;
+  margin: 0;
+  padding: 12px 48px;
+  color: #ff3c64;
+  font-size: 22px;
+  text-decoration: none;
+  border: solid 4px #ff3c64;
+}
+
+/* =============================================================================
+  VIDEO
+============================================================================= */
+/* line 56, ../scss/content.scss */
+.video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+
+/* line 1, ../scss/button.scss */
+.button {
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  background: #3bc0c3;
+  border: 1px solid #3bc0c3;
+  color: #fff;
+  display: inline-block;
+  padding: 6px 15px;
+  margin-bottom: 0;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
+}
+/* line 26, ../scss/button.scss */
+.button:hover, .button:focus {
+  background-color: #309ea1;
+  outline: none;
+}
+
+/* line 32, ../scss/button.scss */
+input {
+  -webkit-appearance: none;
+}
+
+/* line 1, ../scss/form.scss */
+form {
+  position: relative;
+}
+/* line 3, ../scss/form.scss */
+form input[type="text"] {
+  display: block;
+  box-sizing: border-box;
+  line-height: 1.0;
+  font-size: 14px;
+  height: 30PX;
+  border-radius: 3px;
+  width: 230px;
+  left: 0;
+  border: 0;
+  float: left;
+  margin-top: 20px;
+  padding-left: 35px;
+}
+/* line 16, ../scss/form.scss */
+form input[type="text"]:focus {
+  outline: none;
+}
+@media (max-width: 767px) {
+  /* line 3, ../scss/form.scss */
+  form input[type="text"] {
+    width: 100%;
+  }
+}
+/* line 21, ../scss/form.scss */
+form input[type="submit"] {
+  position: absolute;
+  height: 30px;
+  top: 20px;
+  left: 240px;
+}
+@media (max-width: 939px) {
+  /* line 21, ../scss/form.scss */
+  form input[type="submit"] {
+    position: relative;
+    height: 30px;
+    top: 32px;
+    left: 0;
+    float: left;
+    clear: both;
+  }
+}
+@media (max-width: 767px) {
+  /* line 21, ../scss/form.scss */
+  form input[type="submit"] {
+    width: 100%;
+    top: 10px;
+  }
+}
+/* line 40, ../scss/form.scss */
+form:after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-image: url(../../my-assets/images/mail.png);
+  background-repeat: no-repeat;
+  color: #8f8e8e;
+  font-size: 18px;
+  line-height: 46px;
+  text-align: center;
+  position: absolute;
+  top: 23px;
+  left: 3px;
+  background-position: 3px 4px;
+}
+/* line 56, ../scss/form.scss */
+form input {
+  line-height: normal !important;
+}
+
+/* line 61, ../scss/form.scss */
+.ajax-process {
+  display: none;
+  position: absolute;
+  font-size: 12px;
+  color: #fff;
+  font-style: italic;
+  left: 20px;
+  top: 60px;
+}
+/* line 69, ../scss/form.scss */
+.ajax-process:before {
+  content: '';
+  background-image: url(../../my-assets/images/ajax_loader.gif);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: -20px;
+  top: -3px;
+}
+/* line 79, ../scss/form.scss */
+.ajax-process.success {
+  color: #3c8039;
+}
+/* line 81, ../scss/form.scss */
+.ajax-process.success:before {
+  content: '';
+  background-image: url(../../my-assets/images/accept.png);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: -20px;
+  top: -3px;
+}
+/* line 92, ../scss/form.scss */
+.ajax-process.error {
+  color: #f05050;
+}
+/* line 94, ../scss/form.scss */
+.ajax-process.error:before {
+  content: '';
+  background-image: url(../../my-assets/images/error.png);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: -20px;
+  top: -3px;
+}
+@media (max-width: 767px) {
+  /* line 61, ../scss/form.scss */
+  .ajax-process {
+    top: 100px;
+  }
+}
