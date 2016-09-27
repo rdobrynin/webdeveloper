@@ -1,45 +1,36 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Webdeveloper</title>
+    <title>Web developer</title>
     <!-- meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <!-- css -->
-    <link rel="stylesheet" href="http://heckhouse.com/content/themes/hh/assets/css/reset.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" type="text/css"
+          media="screen">
     <link rel="stylesheet" href="stylesheets/styles.css" type="text/css" media="screen">
     <!-- fonts -->
-    <link rel="stylesheet" href="http://heckhouse.com/content/themes/hh/assets/fonts/copernicus/copernicus.css" type="text/css" media="screen" title="no title" charset="utf-8">
-    <link href="//cloud.webtype.com/css/ab4b5a95-a9da-4c49-8461-c755b21a39f2.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="//use.typekit.net/aag6poc.js"></script>
+    <link href="//cloud.webtype.com/css/ab4b5a95-a9da-4c49-8461-c755b21a39f2.css" rel="stylesheet" type="text/css"/>
     <!-- js -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js" type="text/javascript"
+            charset="utf-8"></script>
     <!-- IE -->
-    <!--[if IE]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js" type="text/javascript" charset="utf-8"></script><![endif]-->
-    <script   src="https://code.jquery.com/jquery-1.11.1.min.js"   integrity="sha256-VAvG3sHdS5LqTT+5A/aeq/bZGa/Uj04xKxY8KM/w9EE="   crossorigin="anonymous"></script>
-    <link rel='canonical' href='http://webdeveloper.ee/' />
-    <link rel='shortlink' href='http://webdeveloper.ee/' />
+    <!--[if IE]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js" type="text/javascript"
+            charset="utf-8"></script><![endif]-->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"
+            integrity="sha256-VAvG3sHdS5LqTT+5A/aeq/bZGa/Uj04xKxY8KM/w9EE=" crossorigin="anonymous"></script>
+    <link rel='canonical' href='http://webdeveloper.ee/'/>
+    <link rel='shortlink' href='http://webdeveloper.ee/'/>
 </head>
 <body id="hh" class="non-fixed-nav">
-<!--<script>-->
-    <!--(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){-->
-                <!--(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),-->
-            <!--m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)-->
-    <!--})(window,document,'script','//www.google-analytics.com/analytics.js','ga');-->
-
-    <!--ga('create', 'UA-9684506-4', 'auto');-->
-    <!--ga('send', 'pageview');-->
-
-<!--</script>-->
-
 <aside class="main-intro">
     <figure class="v-center">
-        <!--<img src="http://placehold.it/329x354" width="329" height="354" alt="Logo" class="logo">-->
-        <h2>Web developer Roman Dobrynin</h2>
+        <h1>Front-End Developer, Coder</h1>
     </figure>
     <nav id="primary-navigation" class="primary-navigation ">
+        <a href="http://webdeveloper.ee/" id="logo">RD</a>
+        <a class="logo-title" href="http://webdeveloper.ee/">Roman Dobrynin</a>
         <div class="mouse">
             <div class="scroll"></div>
         </div>
@@ -50,18 +41,20 @@
                 <span class="bar bar-bottom"></span>
             </a>
             <ul id="links" class="links">
-                <li><a href="javascript:void(0);"><img src="images/get-in-touch.png" width="200" height="53"></a></li>
+                <li><a href="javascript:void(0);" onclick="getInTouch();">Get in touch</a></li>
+                <li><a href="javascript:void(0);" onclick="getAbout();">About</a></li>
             </ul>
         </div>
-    </nav>    </aside>
+    </nav>
+</aside>
 <section class="template-front-page wrapper waypoint-nav">
     <div class="row-1">
         <article class="col work-snippet">
             <a href="http://www.reverehotel.com/" target="_blank" class="overlay">
                 <div class="v-center">
                     <time>06.2016</time>
-                    <h1>Revere Hotel</h1>
-                    <h1>Mobile & Desktop</h1>
+                    <h2>Revere Hotel</h2>
+                    <h2>Mobile & Desktop</h2>
                     <hr class="line">
                 </div>
             </a>
@@ -69,27 +62,29 @@
         </article>
         <article class="col blog-snippet">
             <a href="http://www.loewshotels.com/reservations" target="_blank">
-                <time>12.2016</time>
-                <h1>Loewshotels</h1>
-                <h1>Booking Engine</h1>
+                <time>12.2015</time>
+                <h2>Loewshotels</h2>
+                <h2>Booking Engine</h2>
                 <hr class="line">
             </a>
         </article>
         <article class="col work-snippet">
             <a href="http://www.hotelshocardnyc.com/" target="_blank" class="overlay">
-            <div class="v-center">
-                <h1>03.2016</h1>
-                <h1>Shocard Hotel</h1>
-                <h1>Front-End Develop</h1>
-                <hr class="line">
-            </div>
+                <div class="v-center">
+                    <h2>03.2016</h2>
+                    <h2>Shocard Hotel</h2>
+                    <h2>Front-End Develop</h2>
+                    <hr class="line">
+                </div>
             </a>
-            <a href="http://www.hotelshocardnyc.com/" target="_blank"><img src="images/shocard.jpg" width="350" height="350"></a>
+            <a href="http://www.hotelshocardnyc.com/" target="_blank"><img src="images/shocard.jpg" width="350"
+                                                                           height="350"></a>
         </article>
         <article class="col work-snippet end">
-            <a href="https://github.com/rdobrynin?tab=overview&from=2015-12-01&to=2015-12-31" target="_blank" class="overlay">
+            <a href="https://github.com/rdobrynin?tab=overview&from=2015-12-01&to=2015-12-31" target="_blank"
+               class="overlay">
                 <div class="v-center">
-                    <h1>Source of codes</h1>
+                    <h2>Source of codes</h2>
                     <hr class="line">
                 </div>
             </a>
@@ -99,32 +94,26 @@
     <div class="row-2">
         <div class="col-1">
             <div class="subrow-1 group">
-                <article class="col work-snippet subcol-1">
+                <article class="col work-snippet subcol-1 back">
                     <a href="https://www.telia.ee/et/ari/it/pilveserver" class="overlay">
                         <div class="v-center">
-                            <h1>Telia cloud front-end development</h1>
-                            <h1>JS, PHP</h1>
+                            <h2>Telia cloud front-end development</h2>
+                            <h2>JS, PHP</h2>
                             <hr class="line">
                         </div>
                     </a>
-                    <a href="https://www.telia.ee/et/ari/it/pilveserver" target="_blank"><img src="images/onespot.jpg" width="350" height="350"></a>
+                    <a href="https://www.telia.ee/et/ari/it/pilveserver" target="_blank"><img src="images/onespot.jpg"
+                                                                                              width="350" height="350"></a>
                 </article>
                 <div class="subcol-2">
-                    <article class="col work-snippet">
-                        <a href="https://www.hebsdigital.com/" target="_blank" class="overlay">
-                            <div class="v-center">
-                                <h1>2015-2016</h1>
-                                <h1>HeBS Digital</h1>
-                                <h1>Front-End developer</h1>
-                                <hr class="line">
-                            </div>
-                        </a>
-                        <a href="https://www.hebsdigital.com/" target="_blank"><img src="images/hebs.jpg" width="350" height="350"></a>
+                    <article class="col work-snippet off">
+                        <a href="images/cv.pdf" target="_blank" class="overlay off"></a>
+                        <img src="images/roman.jpg" width="350" height="350">
                     </article>
                     <article class="col work-snippet">
                         <a href="https://www.linkedin.com/in/rdobrynin" target="_blank" class="overlay">
                             <div class="v-center">
-                                <h1>Linkedin profile</h1>
+                                <h2>Linkedin profile</h2>
                                 <hr class="line">
                             </div>
                         </a>
@@ -134,39 +123,44 @@
             </div>
             <div class="subrow-2 group">
                 <article class="col work-snippet">
-                    <a href="images/cv.pdf" target="_blank" class="overlay">
+                    <a href="https://www.hebsdigital.com/" target="_blank" class="overlay">
                         <div class="v-center">
-                            <h1>Roman Dobrynin</h1>
-                            <h1>39 years old</h1>
-                            <h1>Curriculum Vitae</h1>
+                            <h2>2015-2016</h2>
+                            <h2>HeBS Digital</h2>
+                            <h2>Front-End developer</h2>
                             <hr class="line">
                         </div>
                     </a>
-                    <a href="images/cv.pdf" target="_blank"><img src="images/roman.jpg" width="350" height="350"></a>
+                    <a href="https://www.hebsdigital.com/" target="_blank"><img src="images/hebs.jpg" width="350"
+                                                                                height="350"></a>
                 </article>
                 <article class="col blog-snippet">
                     <a href="javascript:void(0);">
                         <time>08.21.2014</time>
-                        <h1>Lorem ipsum dolor sit amet, consectetur.</h1>
+                        <h2>Lorem ipsum dolor sit amet, consectetur.</h2>
                         <hr class="line">
                     </a>
                 </article>
             </div>
         </div>
         <div class="col-2">
-            <article class="quote-snippet">
+            <article class="quote-snippet" id="about-me">
                 <blockquote>
-                    <p>Web apps | Javascript | PHP</p>
+                    <p>Responsible for working on a range of projects, designing appealing websites
+                        and interacting on a daily basis with graphic designers, back-end developers
+                        and marketers</p>
+                    <p>Developing and maintaining the front end functionality of websites and apps</p>
                 </blockquote>
             </article>
             <article class="work-snippet col">
                 <a href="javascript:void(0);" class="overlay">
                     <div class="v-center">
-                        <h1>Lorem ipsum dolor.</h1>
+                        <h2>Skills</h2>
                         <hr class="line">
                     </div>
                 </a>
-                <a href="javascript:void(0);" class="image" style="background:url(http://heckhouse.com/content/uploads/2014/08/eephus.jpg) no-repeat center center;background-size:cover;"></a>
+                <a href="javascript:void(0);" class="image"
+                   style="background:url(images/skills.jpg) no-repeat center center;background-size:cover;"></a>
             </article>
         </div>
     </div>
@@ -174,8 +168,8 @@
         <article class="col work-snippet">
             <a href="javascript:void(0);" class="overlay">
                 <div class="v-center">
-                    <h1>UI/UX</h1>
-                    <h1>User Experience</h1>
+                    <h2>UI/UX</h2>
+                    <h2>User Experience</h2>
                     <hr class="line">
                 </div>
             </a>
@@ -184,7 +178,7 @@
         <article class="col work-snippet">
             <a href="javascript:void(0);" class="overlay">
                 <div class="v-center">
-                    <h1>Drupal | Wordpress</h1>
+                    <h2>Drupal | Wordpress</h2>
                     <hr class="line">
                 </div>
             </a>
@@ -194,7 +188,7 @@
         <article class="col work-snippet">
             <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="overlay">
                 <div class="v-center">
-                    <h1>Javascript</h1>
+                    <h2>Javascript</h2>
                     <hr class="line">
                 </div>
             </a>
@@ -203,16 +197,16 @@
         <article class="col work-snippet">
             <a href="http://sass-lang.com/" target="_blank" class="overlay">
                 <div class="v-center">
-                    <h1>SASS/SCSS</h1>
+                    <h2>SASS/SCSS</h2>
                     <hr class="line">
                 </div>
             </a>
-            <a href="javascript:void(0);"><img src="http://heckhouse.com/content/uploads/2014/08/EndGrain.jpg" width="350" height="350"></a>
+            <a href="javascript:void(0);"><img src="images/sass.jpg" width="350" height="350"></a>
         </article>
         <article class="col work-snippet end">
             <a href="http://www.w3schools.com/html/html_responsive.asp" class="overlay">
                 <div class="v-center">
-                    <h1>Mobile Responsive</h1>
+                    <h2>Mobile Responsive</h2>
                     <hr class="line">
                 </div>
             </a>
@@ -222,23 +216,27 @@
 </section>
 <footer class="main-footer">
     <div class="container group">
-        <nav class="social v-center">
-            <a href="javascript:void(0);" target="_blank"><img src="http://heckhouse.com/content/themes/hh/assets/images/icon-dribble.png" data-rollover="http://heckhouse.com/content/themes/hh/assets/images/icon-dribble-rollover.png" class="rollover" width="29" height="29" alt="Dribble"></a>
-            <a href="javascript:void(0);" target="_blank"><img src="http://heckhouse.com/content/themes/hh/assets/images/icon-instagram.png" data-rollover="http://heckhouse.com/content/themes/hh/assets/images/icon-instagram-rollover.png" class="rollover" width="29" height="29" alt="Instagram"></a>
-            <a href="javascript:void(0);" target="_blank"><img src="http://heckhouse.com/content/themes/hh/assets/images/icon-twitter.png" data-rollover="http://heckhouse.com/content/themes/hh/assets/images/icon-twitter-rollover.png" class="rollover" width="29" height="29" alt="Twitter"></a>
-        </nav>
-        <p>
-            Copyright&nbsp;&copy;&nbsp;2016 by <a href="mailto:roman.dobrynin@gmail.com">Roman Dobrynin</a>. All Rights Reserved.
-        </p>
-        <!--<div class="marks-alt v-center">-->
-            <!--<img src="http://heckhouse.com/content/themes/hh/assets/images/icon-heaven.png" width="23" height="8" alt="Icon Heaven">-->
-            <!--<a href="http://nathanaelphilip.com" target="_blank"><img src="http://heckhouse.com/content/themes/hh/assets/images/icon-np.png" data-rollover="http://heckhouse.com/content/themes/hh/assets/images/icon-np-rollover.png" class="rollover np" width="37" height="37" alt="Icon Np"></a>-->
-            <!--<img src="http://heckhouse.com/content/themes/hh/assets/images/icon-heck.png" width="19" height="5" alt="Icon Heck">-->
-        <!--</div>-->
-        <!--<img src="http://heckhouse.com/content/themes/hh/assets/images/logo-alt.png" width="128" height="77" alt="Product of Auburn, AL" class="logo">-->
+        <p>Copyright&nbsp;&copy;&nbsp;2016 by <a href="mailto:roman.dobrynin@gmail.com">Roman Dobrynin</a>. All Rights Reserved.</p>
     </div>
 </footer>
-<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints.min.js?ver=2.0.4'></script>
+
+<section id="feedback">
+    <div class="mail-wrapper">
+        <div class="mail-header">
+            <h2>New Message</h2>
+            <a href="javascript:void(0);" class="mail-close">close</a>
+        </div>
+        <form action="#" id="feedback-form">
+            <input type="text" id="mail-subject" placeholder="Subject: " name="mail-subject">
+            <textarea name="mail-text" id="mail-text" cols="30" rows="10"></textarea>
+            <div class="mail-form-footer">
+                <input type="submit" value="send message" class="button">
+            </div>
+        </form>
+    </div>
+</section>
+<script type='text/javascript'
+        src='//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints.min.js?ver=2.0.4'></script>
 <script type='text/javascript' src='scripts/script.js'></script>
 </body>
 </html>

@@ -210,5 +210,36 @@ jQuery(document).ready(function($) {
 
     }
 
+    $("#feedback-form").submit(function(e) {
+
+        var url = "path/to/your/script.php"; // the script where you handle the form input.
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: $("#idForm").serialize(), // serializes the form's elements.
+            success: function(data, textStatus, jqXHR)
+            {
+                alert(data); // show response from the php script.
+            },
+            error: function(jqXHR, textStatus, errorThrown)
+            {
+               console.log(errorThrown);
+               console.log(textStatus);
+            }
+        });
+
+        e.preventDefault(); //STOP default action
+    });
+
 });
+
+function getInTouch() {
+    $('#feedback').animate({bottom:'1px'}, 200)
+}
+
+function getAbout() {
+    $('#about-me').addClass('animate');
+}
+
 

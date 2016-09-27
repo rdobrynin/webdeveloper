@@ -4,6 +4,18 @@ html,
   height: 100%;
 }
 
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1 {
+  font-family: Droid Serif,Georgia,serif;
+}
+
+h2 {
+  font-size: 24px;
+}
+
 body.fixed-nav {
   padding: 86px 0 0 0;
 }
@@ -33,14 +45,17 @@ body.fixed-nav {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  h2 {
-    color: #fff;
+  h1 {
+    color: #c0a062;
     position: absolute;
+    font-family: Droid Serif,Georgia,serif;
     top: 0;
-    /* left: 50%; */
     text-align: center;
     width: 100%;
-    font-size: 43px;
+    background:	url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAHklEQVQ4T2M0UpacyUABYBw1gGE0DBhGw4BhWIQBAG/tEIEgr3pXAAAAAElFTkSuQmCC);
+    background:	rgba(51, 36, 25, 0.6);
+    padding: 10px;
+    font-size: calc(29px + 45 * ((100vw - 320px) / 1360));
   }
 }
 
@@ -59,14 +74,13 @@ a:hover {
 }
 
 .button {
-  background: #FC5253;
+  background: #c0a062;
   border: none;
   color: #fff;
   display: inline-block;
-  font-family: 'Interstate',sans-serif;
-  font-weight: 600;
+  font-weight: 200;
   font-size: 14px;
-  padding: .9em 1.8em;
+  padding: 10px;
   text-transform: uppercase;
   text-decoration: none;
   -webkit-transition: background .4s;
@@ -74,7 +88,7 @@ a:hover {
 }
 
 .button:hover {
-  background: #de3538;
+  background: #a18551;
   cursor: pointer;
   -webkit-transition: background .4s;
   transition: background .4s;
@@ -102,7 +116,7 @@ a:hover {
   border: 1px solid #E8E8E8;
   border-radius: 0px;
   display: block;
-  font-family: 'nimbus-sans',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 14px;
   margin: 0 0 10px 0;
   padding: 10px;
@@ -157,7 +171,7 @@ a:hover {
 
 .form label {
   color: #848B91;
-  font-family: 'nimbus-sans',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 12px;
 }
 
@@ -167,7 +181,7 @@ a:hover {
 
 .form .thanks {
   color: rgba(255,0,0,.7);
-  font-family: 'Copernicus Heavy',serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 30px;
   line-height: 1.3;
   letter-spacing: 0;
@@ -204,7 +218,7 @@ a:hover {
 .form .input .message {
   background: #fff;
   color: #FC5253;
-  font-family: 'nimbus-sans',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 8px;
   font-style: normal;
   font-weight: 400;
@@ -272,7 +286,7 @@ a:hover {
 }
 
 .filter {
-  font-family: 'nimbus-sans',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 400;
   position: absolute;
   right: 0;
@@ -340,13 +354,19 @@ a:hover {
 }
 
 .overlay {
-  background: rgba(181, 83, 25, 0.75);
+  @media screen and (min-width:721px) {
+    opacity: 0;
+    background: rgba(181, 83, 25, 0.75);
+    &.off {
+      background: none;
+      cursor: default;
+    }
+  }
   color: #fff;
   display: block;
   position: absolute;
   height: 100%;
   left: 0;
-  opacity: 0;
   padding: 10%;
   -webkit-transition: opacity .3s;
   transition: opacity .3s;
@@ -354,18 +374,25 @@ a:hover {
   top: 0;
   width: 100%;
   z-index: 1;
+  @media screen and (max-width:720px) {
+    background:	url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAHklEQVQ4T2P8////TAYKAOOoAQyjYcAwGgYMwyIMAHudOXEnfUyWAAAAAElFTkSuQmCC);
+    background:	rgba(255, 255, 255, 0.6);
+    color: #2d2823;
+    font-weight: 400;
+  }
+
 }
 
 .overlay time {
   display: block;
-  font-family: 'Interstate',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 600;
   margin: 0 0 5px 0;
   text-align: center;
 }
 
-.overlay h1 {
-  font-family: 'Copernicus Heavy',serif;
+.overlay h2 {
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 25px;
   line-height: 1.2;
   margin: 0 0 10px 0;
@@ -396,14 +423,26 @@ article:hover .overlay .line {
   width: 30%;
 }
 
-.work-snippet:hover img,
-.blog-image:hover img {
-  -webkit-transform: rotate(-9deg) scale(1.15);
-  -ms-transform: rotate(-9deg) scale(1.15);
-  transform: rotate(-9deg) scale(1.15);
-  -webkit-transition: -webkit-transform .7s;
-  transition: transform .7s;
+.work-snippet, .blog-image {
+  &:hover img {
+    -webkit-transform: rotate(-9deg) scale(1.15);
+    -ms-transform: rotate(-9deg) scale(1.15);
+    transform: rotate(-9deg) scale(1.15);
+    -webkit-transition: -webkit-transform .7s;
+    transition: transform .7s;
+  }
+  &.off {
+    &:hover img {
+      transform: inherit;
+    }
+  }
 }
+
+
+.off > img   {
+  transform: inherit;
+}
+
 
 .blog-image.no-spin:hover img {
   -webkit-transform: rotate(0deg) scale(1.125);
@@ -451,6 +490,7 @@ article:hover .overlay .line {
   position: fixed;
   top: 0;
   z-index: 50;
+  height: 83px;
 }
 
 .primary-navigation .mark {
@@ -463,7 +503,7 @@ article:hover .overlay .line {
 
 .primary-navigation .links li {
   float: left;
-  font-family: 'Interstate',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: .15em;
@@ -471,18 +511,27 @@ article:hover .overlay .line {
   margin: 0 0 0 35px;
 }
 
-.primary-navigation .links li a {
-  color: #fff;
-  text-decoration: none;
-  img {
-    position: absolute;
-    top: 14px;
-    left: 42px;
-    width: 140px;
-    height: auto;
-    @media screen and (max-width:720px) {
-      top: 2px;
-      left: 20px;
+.primary-navigation .links li  {
+  a {
+    color: #fff;
+    text-decoration: none;
+    img {
+      position: absolute;
+      top: 14px;
+      left: 42px;
+      width: 140px;
+      height: auto;
+      @media screen and (max-width:720px) {
+        top: 2px;
+        left: 20px;
+      }
+    }
+  }
+  &:first-child {
+    a {
+      @media screen and (max-width:720px) {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -499,7 +548,7 @@ article:hover .overlay .line {
 
 @media screen and (max-width:1025px) {
   .primary-navigation {
-    padding: 30px 0;
+    //padding: 30px 0;
   }
 }
 
@@ -508,12 +557,12 @@ article:hover .overlay .line {
     display: block;
     position: absolute;
     right: 20px;
-    top: 10px;
+    top: 26px;
     width: 30px;
   }
 
   .primary-navigation .hamburger .bar {
-    background: #fff;
+    background: #c0a062;
     display: block;
     height: 3px;
     margin: 6px;
@@ -549,7 +598,7 @@ article:hover .overlay .line {
 
   .primary-navigation .links {
     background: #fff;
-    background: rgba(14, 12, 11, 0.5);
+    background: rgba(14, 12, 11, 0.8);
     left: 0;
     opacity: 0;
     padding: 15px 0;
@@ -767,13 +816,22 @@ article:hover .overlay .line {
 }
 
 .template-front-page .quote-snippet {
-  background: #FC5253;
+  background: #395c92;
   padding: 5.5%;
+  -webkit-transition: all 1.5s ease-out;
+  transition: all 1.5s ease-out;
+  &.animate {
+    position: fixed;
+    top: 83px;
+    z-index: 999999;
+    width: 100%;
+    left: 0;
+  }
 }
 
 .template-front-page .quote-snippet p {
   color: #fff;
-  font-family: 'Copernicus Heavy',serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 27px;
   line-height: 1.4;
 }
@@ -800,7 +858,7 @@ article:hover .overlay .line {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background: #e66a1f;
+  background: #f31018;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -809,32 +867,35 @@ article:hover .overlay .line {
   -webkit-transition: background .4s;
   transition: background .4s;
   text-align: center;
+  background: url(../images/loewshotels.jpg) no-repeat center center;
+  background-size: cover;
 }
 
 .template-front-page .blog-snippet:hover {
-  background: #b6561a;
+  background:	url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAHklEQVQ4T2NkSFw6k4ECwDhqAMNoGDCMhgHDsAgDANL5GgEHENOvAAAAAElFTkSuQmCC);
+  background:	rgba(0, 97, 165, 0.6);
   -webkit-transition: background .4s;
   transition: background .4s;
 }
 
 .template-front-page .blog-snippet > a {
-  color: #fff;
+  color: #0061A5;
   display: block;
   text-decoration: none;
   width: 100%;
 }
 
 .template-front-page .blog-snippet time {
-  color: #fff;
+  color: #0061A5;
   display: block;
-  font-family: 'Interstate',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 600;
   font-size: 14px;
   margin: 0 0 10px 0;
 }
 
 .template-front-page .blog-snippet h1 {
-  font-family: 'Copernicus Heavy',serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 44px;
 }
 
@@ -938,7 +999,7 @@ article:hover .overlay .line {
 }
 
 .template-archive-project .project-excerpt .title {
-  font-family: 'Copernicus Heavy',serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 22px;
   line-height: 1.3;
   margin: 0 0 5px 0;
@@ -950,7 +1011,7 @@ article:hover .overlay .line {
 }
 
 .template-archive-project .project-excerpt .categories {
-  font-family: 'nimbus-sans',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   color: #BFBFBF;
   font-size: 16px;
   font-style: italic;
@@ -978,14 +1039,14 @@ article:hover .overlay .line {
 
 .template-single-project .title {
   color: #33384A;
-  font-family: 'Copernicus Heavy',serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 55px;
   margin: 0 0 15px 0;
 }
 
 .template-single-project .category {
   color: #FC5253;
-  font-family: 'Interstate',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 2px;
@@ -1041,7 +1102,7 @@ article:hover .overlay .line {
 }
 
 .template-single-project .footnotes {
-  font-family: 'nimbus-sans',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 200;
   font-size: 13px;
   line-height: 1.5;
@@ -1089,7 +1150,7 @@ article:hover .overlay .line {
 
 .template-single-project .noted {
   bottom: 20px;
-  font-family: 'nimbus-sans',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 14px;
   position: absolute;
   width: 100%;
@@ -1256,7 +1317,7 @@ article:hover .overlay .line {
 
 .template-page-about h1 {
   color: #FC5253;
-  font-family: 'Copernicus Heavy',serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 120px;
   line-height: 1;
 }
@@ -1300,7 +1361,7 @@ article:hover .overlay .line {
 
 .blog-entry .title {
   color: #33384A;
-  font-family: 'Copernicus Heavy',serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 125px;
   line-height: 1.1;
 }
@@ -1314,7 +1375,7 @@ article:hover .overlay .line {
 
 .blog-entry .meta {
   float: left;
-  font-family: 'Interstate',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 600;
   margin: 5px 0 0 -30%;
   width: 25%;
@@ -1350,7 +1411,7 @@ article:hover .overlay .line {
 
 .blog-entry .intro {
   color: #FC5253;
-  font-family: 'Interstate',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 24px;
   font-weight: 600;
   height: auto;
@@ -1407,7 +1468,7 @@ article:hover .overlay .line {
 
 .blog-entry .content p {
   color: #A9AEB2;
-  font-family: 'nimbus-sans',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 18px;
   line-height: 1.7;
   margin: 0 0 1.4em 0;
@@ -1416,7 +1477,7 @@ article:hover .overlay .line {
 .blog-entry .content > p:first-child:first-letter {
   color: #A0D8F2;
   float: left;
-  font-family: 'Copernicus Heavy',serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 87px;
   line-height: 1;
   margin: 2px 10px 1px 0;
@@ -1429,7 +1490,7 @@ article:hover .overlay .line {
 
 .blog-entry .content h1 {
   color: #A0D8F2;
-  font-family: 'Interstate',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 24px;
   font-weight: 600;
   margin: 2em 0 .7em 0;
@@ -1438,7 +1499,7 @@ article:hover .overlay .line {
 
 .blog-entry .content h2 {
   color: #33384A;
-  font-family: 'Copernicus Heavy',serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 20px;
   margin: 2em 0 .7em 0;
 }
@@ -1464,7 +1525,7 @@ article:hover .overlay .line {
 
 .blog-entry .content .wp-caption-text {
   color: #848B91;
-  font-family: 'Interstate',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.4;
@@ -1495,7 +1556,7 @@ article:hover .overlay .line {
 
 .blog-entry .content blockquote p {
   color: #838691;
-  font-family: 'Harriet Text Light',serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 24px;
   font-style: italic;
   line-height: 1.5;
@@ -1519,7 +1580,7 @@ article:hover .overlay .line {
 
 .blog-entry .content .quote-full p {
   color: #33384A;
-  font-family: 'Copernicus Heavy',serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 38px;
   font-style: normal;
   margin: 0;
@@ -1690,7 +1751,7 @@ article:hover .overlay .line {
 .pagination .entry time {
   color: #A0D8F2;
   display: block;
-  font-family: 'Interstate',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 600;
   font-size: 14px;
   margin: 0 0 10px 0;
@@ -1698,7 +1759,7 @@ article:hover .overlay .line {
 
 .pagination .entry h1 {
   color: #33384A;
-  font-family: 'Copernicus Heavy',serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 18px;
   margin: 0 0 8px 0;
 }
@@ -1755,7 +1816,7 @@ article:hover .overlay .line {
 
 .comments h1 {
   color: #33384A;
-  font-family: 'Interstate',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 48px;
   font-weight: 600;
   margin: 0 0 15px 0;
@@ -1779,14 +1840,14 @@ article:hover .overlay .line {
 
 .comments .comment h3 {
   color: #FC5253;
-  font-family: 'Copernicus Heavy',serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 16px;
   margin: 0 0 7px 0;
 }
 
 .comments .comment p {
   color: #A9AEB2;
-  font-family: 'nimbus-sans',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 16px;
   line-height: 1.6;
   margin: 0 0 7px 0;
@@ -1807,7 +1868,7 @@ article:hover .overlay .line {
 
 .comments .form p {
   color: #848B91;
-  font-family: 'nimbus-sans',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 13px;
   font-style: italic;
 }
@@ -1902,14 +1963,14 @@ article:hover .overlay .line {
 .template-index .blog-snippet time {
   color: #A0D8F2;
   display: block;
-  font-family: 'Interstate',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 14px;
   font-weight: 600;
   margin: 0 0 10px 0;
 }
 
 .template-index .blog-snippet h1 {
-  font-family: 'Copernicus Heavy',serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 44px;
 }
 
@@ -2050,7 +2111,7 @@ article:hover .overlay .line {
 
 .info-quote {
   color: #33384A;
-  font-family: 'Harriet Text Light',serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 30px;
   font-style: italic;
   line-height: 1.4;
@@ -2087,7 +2148,7 @@ article:hover .overlay .line {
 
 .details h3 {
   color: #33384A;
-  font-family: 'Interstate',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: .15em;
@@ -2098,7 +2159,7 @@ article:hover .overlay .line {
 .details ul,
 .details p {
   color: #848B91;
-  font-family: 'nimbus-sans',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 13px;
   line-height: 1.5;
 }
@@ -2177,7 +2238,7 @@ article:hover .overlay .line {
 
 .resume .link {
   color: #FC5253;
-  font-family: 'Interstate',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 600;
   font-size: 18px;
   text-decoration: none;
@@ -2186,6 +2247,7 @@ article:hover .overlay .line {
 .main-footer {
   padding: 35px 0;
   background-color: #84807d;
+  text-align: center;
 }
 
 .main-footer .container {
@@ -2269,19 +2331,7 @@ article:hover .overlay .line {
   background: #fff;
 }
 
-.lb-outerContainer,
-.lightbox .lb-image {
-  border-radius: 0px;
-}
 
-.lb-data .lb-number {
-  font-family: 'nimbus-sans',sans-serif;
-  font-size: 16px;
-}
-
-.lb-data .lb-close {
-  background-image: url(../images/close.png);
-}
 
   .mouse {
     width: 25px;
@@ -2342,7 +2392,6 @@ article:hover .overlay .line {
 
 footer {
   p {
-    float: right;
     position: relative;
     color: #fff;
     a {
