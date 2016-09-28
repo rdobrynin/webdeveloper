@@ -138,15 +138,26 @@ jQuery(document).ready(function($) {
 
     $("#feedback-form").submit(function(e) {
 
-        var url = "path/to/your/script.php"; // the script where you handle the form input.
+        var url = "php/mail.php"; // the script where you handle the form input.
 
         $.ajax({
             type: "POST",
             url: url,
-            data: $("#idForm").serialize(), // serializes the form's elements.
+            dataType: 'json', // oтвeт ждeм в json фoрмaтe
+            data: $("#feedback-form").serialize(), // serializes the form's elements.
             success: function(data, textStatus, jqXHR)
             {
-                alert(data); // show response from the php script.
+                console.log(data); // show response from the php script.
+                if(data.error == 0) {
+                    $('.alert').fadeIn('fast');
+                    setTimeout(function(){
+                        $('#feedback').animate({bottom:'-564px'}, 200)
+                    }, 200);
+                    setTimeout(function(){
+                        $('.alert').fadeOut('fast');
+                    }, 1500);
+                    $('#mail-address, #mail-name, #mail-text').text();
+                }
             },
             error: function(jqXHR, textStatus, errorThrown)
             {

@@ -2903,24 +2903,24 @@ section#feedback .mail-wrapper form {
   background-color: #fff;
 }
 /* line 65, ../scss/layout/feedback.scss */
-section#feedback .mail-wrapper form input[type="text"], section#feedback .mail-wrapper form input[type="mail"], section#feedback .mail-wrapper form textarea {
+section#feedback .mail-wrapper form input[type="text"], section#feedback .mail-wrapper form input[type="email"], section#feedback .mail-wrapper form textarea {
   width: 500px;
   padding: 10px;
 }
 @media screen and (max-width: 720px) {
   /* line 65, ../scss/layout/feedback.scss */
-  section#feedback .mail-wrapper form input[type="text"], section#feedback .mail-wrapper form input[type="mail"], section#feedback .mail-wrapper form textarea {
+  section#feedback .mail-wrapper form input[type="text"], section#feedback .mail-wrapper form input[type="email"], section#feedback .mail-wrapper form textarea {
     width: 100%;
   }
 }
 /* line 72, ../scss/layout/feedback.scss */
-section#feedback .mail-wrapper form input[type="text"] {
+section#feedback .mail-wrapper form input[type="text"], section#feedback .mail-wrapper form input[type="email"] {
   border: 0;
   border-bottom: 1px solid #e4e4e4;
 }
 @media screen and (max-width: 720px) {
   /* line 72, ../scss/layout/feedback.scss */
-  section#feedback .mail-wrapper form input[type="text"] {
+  section#feedback .mail-wrapper form input[type="text"], section#feedback .mail-wrapper form input[type="email"] {
     width: 100%;
   }
 }
@@ -2933,6 +2933,20 @@ section#feedback .mail-wrapper form textarea {
 /* line 85, ../scss/layout/feedback.scss */
 section#feedback .mail-wrapper .mail-form-footer {
   padding: 10px;
+}
+
+/* line 92, ../scss/layout/feedback.scss */
+.alert {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  background-color: #ff7300;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+  color: #fff;
 }
 
 /* line 1, ../scss/header.scss */

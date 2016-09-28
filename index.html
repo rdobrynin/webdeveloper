@@ -256,9 +256,10 @@
             <h2>New Message</h2>
             <a href="javascript:void(0);" class="close-button" onclick="closeFeedback();"></a>
         </div>
-        <form action="#" id="feedback-form">
-            <input type="text" id="mail-subject" placeholder="Subject: " name="mail-subject">
-            <textarea name="mail-text" id="mail-text" cols="30" rows="22"></textarea>
+        <form action="#" id="feedback-form" method="post">
+            <input type="email" id="mail-address" placeholder="Mail address: " name="email">
+            <input type="text" id="mail-name" placeholder="Your name: " name="name">
+            <textarea id="mail-text" name="message" cols="30" rows="22"></textarea>
             <div class="mail-form-footer">
                 <input type="submit" value="send message" class="button">
             </div>
@@ -268,5 +269,8 @@
 <script type='text/javascript'
         src='//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints.min.js?ver=2.0.4'></script>
 <script type='text/javascript' src='scripts/script.js'></script>
+<div class="alert">
+    <p>Thank you for message!</p>
+</div>
 </body>
 </html>

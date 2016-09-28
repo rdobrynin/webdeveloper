@@ -62,14 +62,14 @@ section#feedback {
     }
     form {
       background-color: #fff;
-      input[type="text"], input[type="mail"], textarea {
+      input[type="text"], input[type="email"], textarea {
         width: 500px;
         @media screen and (max-width:720px) {
           width: 100%;
         }
         padding: 10px;
       }
-      input[type="text"] {
+      input[type="text"], input[type="email"] {
         @media screen and (max-width:720px) {
           width: 100%;
         }
@@ -86,4 +86,18 @@ section#feedback {
       padding: 10px;
     }
   }
+
+}
+
+.alert {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  background-color: #ff7300;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+  color: #fff;
 }
