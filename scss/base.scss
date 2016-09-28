@@ -4,6 +4,10 @@ html,
   height: 100%;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Open Sans Condensed', sans-serif;
 }
@@ -71,27 +75,6 @@ a,
 a:hover {
   -webkit-transition: color .4s;
   transition: color .4s;
-}
-
-.button {
-  background: #c0a062;
-  border: none;
-  color: #fff;
-  display: inline-block;
-  font-weight: 200;
-  font-size: 14px;
-  padding: 10px;
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-transition: background .4s;
-  transition: background .4s;
-}
-
-.button:hover {
-  background: #a18551;
-  cursor: pointer;
-  -webkit-transition: background .4s;
-  transition: background .4s;
 }
 
 .form {
@@ -701,31 +684,33 @@ article:hover .overlay .line {
 }
 
 .template-front-page .row-2 .col-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  //display: -webkit-box;
+  //display: -webkit-flex;
+  //display: -ms-flexbox;
+  //display: flex;
+  //-webkit-box-orient: vertical;
+  //-webkit-box-direction: normal;
+  //-webkit-flex-direction: column;
+  //-ms-flex-direction: column;
+  //flex-direction: column;
   width: 60%;
 }
 
 .template-front-page .row-2 .col-1 .subrow-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  //display: -webkit-box;
+  //display: -webkit-flex;
+  //display: -ms-flexbox;
+  //display: flex;
 }
 
 .template-front-page .row-2 .col-1 .subrow-1 .subcol-1 {
   width: 66.65%;
+  float: left;
 }
 
 .template-front-page .row-2 .col-1 .subrow-1 .subcol-2 {
   width: 33.35%;
+  float: left;
 }
 
 .template-front-page .row-2 .col-1 .subrow-2 {
@@ -820,13 +805,6 @@ article:hover .overlay .line {
   padding: 5.5%;
   -webkit-transition: all 1.5s ease-out;
   transition: all 1.5s ease-out;
-  &.animate {
-    position: fixed;
-    top: 83px;
-    z-index: 999999;
-    width: 100%;
-    left: 0;
-  }
 }
 
 .template-front-page .quote-snippet p {
@@ -841,6 +819,17 @@ article:hover .overlay .line {
   height: auto;
   width: 100%;
 }
+
+.template-front-page .work-snippet   {
+  ul {
+    margin-bottom: 20px;
+    li {
+      padding: 2px 0;
+      text-align: center;
+    }
+  }
+}
+
 
 .template-front-page .work-snippet {
   overflow: hidden;

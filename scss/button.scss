@@ -1,34 +1,19 @@
 .button {
-  font-size: 12px;
-  font-weight: 700;
-  text-decoration: none;
-  background: $brand-color;
-  border: 1px solid $brand-color;
+  background: #c0a062;
+  border: none;
   color: #fff;
   display: inline-block;
-  padding: 6px 15px;
-  margin-bottom: 0;
-  text-align: center;
+  font-weight: 200;
+  font-size: 12px;
+  padding: 10px;
   text-transform: uppercase;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-border-radius: $default-border-radius;
-  -moz-border-radius: $default-border-radius;
-  border-radius: $default-border-radius;
-  white-space: nowrap;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  -webkit-transition: background-color 0.2s ease-in;
-  transition: background-color 0.2s ease-in;
-  &:hover, &:focus {
-    background-color: #309ea1;
-    outline: none;
+  text-decoration: none;
+  -webkit-transition: background .4s;
+  transition: background .4s;
+  &:hover {
+    background: #a18551;
+    cursor: pointer;
+    -webkit-transition: background .4s;
+    transition: background .4s;
   }
-}
-
-input {
-  -webkit-appearance: none;
 }

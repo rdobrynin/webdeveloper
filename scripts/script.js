@@ -41,7 +41,7 @@ jQuery(document).ready(function($) {
 
     $(".mouse").click(function() {
         $('html, body').animate({
-            scrollTop: $(".row-1").offset().top -71
+            scrollTop: $(".row-1").offset().top -78
         }, 400);
     });
 
@@ -237,9 +237,4 @@ jQuery(document).ready(function($) {
 function getInTouch() {
     $('#feedback').animate({bottom:'1px'}, 200)
 }
-
-function getAbout() {
-    $('#about-me').addClass('animate');
-}
-
 
