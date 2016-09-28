@@ -155,7 +155,7 @@ jQuery(document).ready(function($) {
                     }, 200);
                     setTimeout(function(){
                         $('.alert').fadeOut('fast');
-                    }, 1500);
+                    }, 2100);
                     $('#mail-address, #mail-name, #mail-text').text();
                 }
             },

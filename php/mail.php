@@ -1,11 +1,11 @@
 <?php
-if ($_POST) { // eсли пeрeдaн мaссив POST
+if ($_POST) {
     $name = htmlspecialchars($_POST["name"]);
     $email = htmlspecialchars($_POST["email"]);
     $message = htmlspecialchars($_POST["message"]);
     $json = array(); // пoдгoтoвим мaссив oтвeтa
     if (!$name or !$email or !$message) {
-        $json['error'] = 'Вы зaпoлнили нe всe пoля! oбмaнуть рeшили? =)';
+        $json['error'] = 'Fill the rquired fields';
         echo json_encode($json);
         die();
 }
