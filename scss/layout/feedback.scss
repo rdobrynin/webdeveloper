@@ -1,6 +1,6 @@
 section#feedback {
   position: fixed;
-  bottom: -298px;
+  bottom: -564px;
   right: 20px;
   @media screen and (max-width:720px) {
     left: 20px;
@@ -20,18 +20,39 @@ section#feedback {
       position: relative;
       text-transform: capitalize;
       cursor: default;
-      .mail-close {
+      .close-button {
+        height: 25px;
+        width: 25px;
         position: absolute;
-        z-index: 999;
-        top: 5px;
-        right: 7px;
-        text-indent: -9999em;
-        width: 17px;
-        height: 17px;
-        background: url('../images/sprite.png');
-        opacity: .6;
-        background-repeat: no-repeat;
-        background-position: 4px -410px;
+        box-sizing: border-box;
+        line-height: 5px;
+        display: inline-block;
+        top: 2px;
+        right: 2px;
+        &:before,
+        &:after {
+          width: 20px;
+          height: 3px;
+          transform: rotate(-45deg);
+          content: '';
+          position: absolute;
+          top: 11px;
+          left: 3px;
+          margin-top: -5;
+          margin-left: -25;
+          display: block;
+          background-color: #fff;
+          transition: all 0.2s ease-out;
+        }
+        &:after {
+          transform: rotate(45deg);
+        }
+        &:hover {
+          &:before,
+          &:after {
+            transform: rotate(0deg);
+          }
+        }
       }
       h2 {
         padding: 10px;

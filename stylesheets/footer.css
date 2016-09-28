@@ -1,0 +1,14 @@
+/* line 2, ../scss/footer.scss */
+footer p {
+  position: relative;
+  color: #fff;
+}
+/* line 5, ../scss/footer.scss */
+footer p a {
+  color: #fff;
+  text-decoration: none;
+}
+/* line 8, ../scss/footer.scss */
+footer p a:hover {
+  color: #ccc;
+}

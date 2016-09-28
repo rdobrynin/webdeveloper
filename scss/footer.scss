@@ -1,0 +1,13 @@
+footer {
+  p {
+    position: relative;
+    color: #fff;
+    a {
+      color:#fff;
+      text-decoration: none;
+      &:hover {
+        color:#ccc;
+      }
+    }
+  }
+}

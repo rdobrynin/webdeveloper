@@ -45,81 +45,7 @@ jQuery(document).ready(function($) {
         }, 400);
     });
 
-    // forms
 
-    var $form = $("#form");
-    var $inputs = $('input.required,textarea.required',$form);
-    var $ty = $('#thanks');
-
-    $form.on('submit',function(e){
-
-        e.preventDefault();
-
-        var $submit = $('input[type="submit"]',this);
-        var $inputs = $('input.required,textarea.required',$form);
-
-        $inputs.each(function(index) {
-
-            inputCheck($(this));
-
-        });
-
-        if (!$('.error',this).length) {
-
-            var data = $form.serialize();
-
-            $form.addClass('sending');
-
-            var action = $(this).attr('action');
-            var url =  action || HH.ajax;
-            var type = $(this).data('type');
-
-            $.ajax({
-
-                url: url,
-                type: 'POST',
-                dataType: type,
-                data: data,
-                success: function(data, textStatus, xhr) {
-
-                    if (type == 'html') {
-                        successComments(data);
-                    }
-
-                    $ty.addClass('show');
-                    $form.removeClass('sending').addClass('sent');
-                    $submit.attr('disabled','disabled');
-                    $inputs.attr('disabled','disabled');
-
-                },
-                error: function(a,b,c){
-                    console.log(a);
-                    console.log(b);
-                    console.log(c);
-                }
-
-            });
-
-        }
-
-    });
-
-    function successComments(data){
-
-        $('#comment-list').append(data);
-
-        setTimeout(function(){
-            $('li.hidden').removeClass('hidden');
-        }, 500);
-
-
-    }
-
-    $inputs.on('blur',function(){
-
-        inputCheck($(this));
-
-    });
 
     function inputCheck($input){
 
@@ -231,10 +157,13 @@ jQuery(document).ready(function($) {
 
         e.preventDefault(); //STOP default action
     });
-
 });
 
 function getInTouch() {
     $('#feedback').animate({bottom:'1px'}, 200)
+}
+
+function closeFeedback() {
+    $('#feedback').animate({bottom:'-564px'}, 200)
 }
 

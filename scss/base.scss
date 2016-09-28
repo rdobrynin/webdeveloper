@@ -368,14 +368,20 @@ a:hover {
 
 .overlay time {
   display: block;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: Roboto,Helvetica,Arial,sans-serif;
+  @media screen and (max-width:720px) {
+    color: #0061A5;
+  }
   font-weight: 600;
   margin: 0 0 5px 0;
   text-align: center;
 }
 
 .overlay h2 {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: Roboto,Helvetica,Arial,sans-serif;
+  @media screen and (max-width:720px) {
+    color: #0061A5;
+  }
   font-size: 25px;
   line-height: 1.2;
   margin: 0 0 10px 0;
@@ -858,20 +864,20 @@ article:hover .overlay .line {
   text-align: center;
   background: url(../images/loewshotels.jpg) no-repeat center center;
   background-size: cover;
+  &.best {
+    background: url(../images/bestwestern.jpg) no-repeat center center;
+  }
 }
 
-.template-front-page .blog-snippet:hover {
-  background:	url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAHklEQVQ4T2NkSFw6k4ECwDhqAMNoGDCMhgHDsAgDANL5GgEHENOvAAAAAElFTkSuQmCC);
-  background:	rgba(0, 97, 165, 0.6);
-  -webkit-transition: background .4s;
-  transition: background .4s;
-}
 
 .template-front-page .blog-snippet > a {
   color: #0061A5;
   display: block;
   text-decoration: none;
   width: 100%;
+  font-family: Roboto,Helvetica,Arial,sans-serif;
+  background-color: rgba(255,255,255, 0.5);
+  padding: 10px;
 }
 
 .template-front-page .blog-snippet time {
@@ -2378,17 +2384,3 @@ article:hover .overlay .line {
       transform: translateY(10px);
     }
   }
-
-footer {
-  p {
-    position: relative;
-    color: #fff;
-    a {
-      color:#fff;
-      text-decoration: none;
-      &:hover {
-        color:#ccc;
-      }
-    }
-  }
-}
