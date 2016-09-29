@@ -4,6 +4,7 @@ section#feedback {
   right: 20px;
   @media screen and (max-width:720px) {
     left: 20px;
+    z-index: 999;
   }
   z-index: 1;
   .mail-wrapper {
@@ -27,8 +28,8 @@ section#feedback {
         box-sizing: border-box;
         line-height: 5px;
         display: inline-block;
-        top: 2px;
-        right: 2px;
+        top: 6px;
+        right: 8px;
         &:before,
         &:after {
           width: 20px;
@@ -55,8 +56,8 @@ section#feedback {
         }
       }
       h2 {
-        padding: 10px;
-        font-size: 17px;
+        padding: 14px;
+        font-size: 18px;
         line-height: 10px;
       }
     }
