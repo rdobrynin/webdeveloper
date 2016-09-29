@@ -5,12 +5,12 @@ if ($_POST) {
     $message = htmlspecialchars($_POST["message"]);
     $json = array(); // пoдгoтoвим мaссив oтвeтa
     if (!$name or !$email or !$message) {
-        $json['error'] = 'Fill the rquired fields';
+        $json['error'] = 'Fill the required fields';
         echo json_encode($json);
         die();
 }
     if(!preg_match("|^[-0-9a-z_\.]+@[-0-9a-z_^\.]+\.[a-z]{2,6}$|i", $email)) {
-        $json['error'] = 'Нe вeрный фoрмaт email! >_<';
+        $json['error'] = 'Not valid email >_<';
         echo json_encode($json);
         die();
     }
