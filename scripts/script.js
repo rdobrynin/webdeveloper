@@ -149,7 +149,7 @@ jQuery(document).ready(function($) {
             {
                 console.log(data); // show response from the php script.
                 if(data.error == 0) {
-                    $('.alert').fadeIn('fast');
+                    $('.alert').html('<p>Thank you for message!</p>').fadeIn('fast');
                     setTimeout(function(){
                         $('#feedback').animate({bottom:'-564px'}, 200)
                     }, 200);
@@ -157,6 +157,12 @@ jQuery(document).ready(function($) {
                         $('.alert').fadeOut('fast');
                     }, 2100);
                     $('#mail-address, #mail-name, #mail-text').text();
+                }
+                else {
+                    $('.alert').html('<p>'+data.error+'</p>').fadeIn('fast');
+                    setTimeout(function(){
+                        $('.alert').fadeOut('fast');
+                    }, 2100);
                 }
             },
             error: function(jqXHR, textStatus, errorThrown)
