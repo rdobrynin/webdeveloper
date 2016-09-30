@@ -1,10 +1,15 @@
 section#feedback {
   position: fixed;
   bottom: -564px;
-  right: 20px;
+  right: 20px !important;
   @media screen and (max-width:720px) {
-    left: 20px;
-    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: -100%;
+    z-index: 9999;
+    width: 100%;
+    background-color: #fff;
   }
   z-index: 1;
   .mail-wrapper {
@@ -13,8 +18,10 @@ section#feedback {
     @media screen and (max-width:720px) {
       width: 100%;
     }
-    -webkit-box-shadow: rgba(0,0,0,0.5) 0 2px 6px;
-    box-shadow: rgba(0,0,0,0.5) 0 2px 6px;
+    @media screen and (min-width:721px) {
+      -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 2px 6px;
+      box-shadow: rgba(0, 0, 0, 0.5) 0 2px 6px;
+    }
     .mail-header {
       background-color: #c0a062;
       color:#fff;
@@ -80,11 +87,18 @@ section#feedback {
       textarea {
         resize: none;
         border-color: transparent;
-        border-bottom: 1px solid #e4e4e4;
+        @media screen and (min-width:721px) {
+          border-bottom: 1px solid #e4e4e4;
+        }
       }
     }
     .mail-form-footer {
       padding: 10px;
+
+      @media screen and (max-width:720px) {
+        position: fixed;
+        bottom: 0;
+      }
     }
   }
 

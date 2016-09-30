@@ -366,6 +366,9 @@ article:hover .overlay .line {
 
 .primary-navigation .links {
   float: right;
+  @media screen and (min-width:721px) {
+    padding-right: 20px;
+  }
 }
 
 .primary-navigation .links li {
@@ -2202,11 +2205,11 @@ article:hover .overlay .line {
     position: absolute;
     height: 36px;
     border-radius: 15px;
-    border: 2px solid #888;
     border: 2px solid rgba(255, 255, 255, 0.27);
+  ;
     cursor: pointer;
     right: 20px;
-    top: 20px;
+    top: 23px;
     &:hover {
       border: 2px solid rgba(255,255,255,0.4);
     }
